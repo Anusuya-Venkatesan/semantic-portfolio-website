@@ -1,3 +1,18 @@
+:root{
+    --bg-color:#ffffff;
+    --text-color:#222222;
+    --primary:#2563eb;
+    --card-bg:#f4f4f4;
+    --shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"]{
+    --bg-color:#121212;
+    --text-color:#ffffff;
+    --primary:#60a5fa;
+    --card-bg:#1f1f1f;
+}
+
 *{
     margin:0;
     padding:0;
@@ -6,19 +21,25 @@
 
 body{
     font-family:Arial, sans-serif;
+    background:var(--bg-color);
+    color:var(--text-color);
     line-height:1.6;
+    transition:0.3s;
 }
 
+/* Header */
+
 header{
-    background:#222;
+    background:var(--primary);
     color:white;
-    padding:20px;
+    padding:1rem;
 }
 
 nav ul{
     display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
     list-style:none;
-    gap:20px;
 }
 
 nav a{
@@ -26,41 +47,87 @@ nav a{
     text-decoration:none;
 }
 
+/* Main Layout */
+
 main{
     padding:20px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
 }
+
+/* Cards */
 
 section{
-    margin-bottom:30px;
+    background:var(--card-bg);
+    padding:20px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
 }
+
+article{
+    margin-top:15px;
+    padding:15px;
+    background:white;
+    border-radius:10px;
+}
+
+/* Skills */
+
+.skills-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skills-list li{
+    background:var(--primary);
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    list-style:none;
+}
+
+/* Form */
 
 form{
-    max-width:500px;
-}
-
-label{
-    display:block;
-    margin-top:15px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
 input,
 textarea{
-    width:100%;
-    padding:10px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
 }
 
 button{
-    margin-top:15px;
-    padding:10px 20px;
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:12px;
     cursor:pointer;
+    border-radius:6px;
+}
+#theme-toggle{
+    padding:10px 15px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:10px;
 }
 
+/* Footer */
+
 footer{
-    background:#222;
-    color:white;
     text-align:center;
-    padding:15px;
+    padding:20px;
+    margin-top:20px;
 }
+
+/* Skip Link */
 
 .skip-link{
     position:absolute;
@@ -73,4 +140,35 @@ footer{
     background:white;
     color:black;
     padding:10px;
+}
+
+/* Tablet */
+
+@media (min-width:768px){
+
+    main{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .full-width{
+        grid-column:span 2;
+    }
+}
+
+/* Desktop */
+
+@media (min-width:1024px){
+
+    main{
+        grid-template-columns:
+        1fr 1fr 1fr;
+    }
+
+    .full-width{
+        grid-column:span 3;
+    }
+
+    nav ul{
+        justify-content:center;
+    }
 }
