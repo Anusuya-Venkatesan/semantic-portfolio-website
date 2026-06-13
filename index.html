@@ -1,104 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Anusuya V | Portfolio</title>
-
-    <meta name="description"
-        content="Personal portfolio website of Anusuya V showcasing projects, skills and contact information.">
-
-    <meta name="keywords"
-        content="Portfolio, Web Developer, Student, HTML5, CSS3, Accessibility">
-
-    <meta name="author" content="Anusuya V">
-
+    <title>To-Do App</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <a href="#main-content" class="skip-link">
-        Skip to Main Content
-    </a>
+<div class="container">
 
-   <header role="banner">
+    <h1>To-Do List</h1>
 
-    <h1>Anusuya V</h1>
+    <div class="input-section">
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button id="addBtn">Add Task</button>
+    </div>
 
-    <nav aria-label="Main Navigation">
+    <div class="filters">
+        <button data-filter="all">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="completed">Completed</button>
+    </div>
 
-        <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <ul id="taskList"></ul>
 
-    </nav>
+</div>
 
-    <button id="theme-toggle">
-        🌙 Dark Mode
-    </button>
-
-</header>
-
-    <main id="main-content">
-
-        <section aria-labelledby="welcome-heading">
-
-            <h2 id="welcome-heading">
-                Welcome to My Portfolio
-            </h2>
-
-            <p>
-                I am a Artificial Intelligence and Data Science student interested in web development,
-                graphic design, and technology.
-            </p>
-
-        </section>
-
-        <section aria-labelledby="skills-heading">
-
-            <h2 id="skills-heading">Skills</h2>
-
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Python</li>
-                <li>Java</li>
-            </ul>
-
-        </section>
-
-        <section aria-labelledby="project-heading">
-
-            <h2 id="project-heading">Projects</h2>
-
-            <article>
-
-                <h3>Lush Bloom</h3>
-
-                <p>
-                    A creative design project focused on branding and social
-                    media graphics.
-                </p>
-
-            </article>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-        <p>
-            © 2026 Anusuya V. All Rights Reserved.
-        </p>
-
-    </footer>
 <script src="script.js"></script>
-</body>
 
+</body>
 </html>
