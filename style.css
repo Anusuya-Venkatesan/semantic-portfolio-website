@@ -9,53 +9,29 @@ body{
     background:#f4f4f4;
     display:flex;
     justify-content:center;
-    padding:40px;
+    align-items:center;
+    height:100vh;
 }
 
 .container{
-    width:500px;
     background:white;
-    padding:20px;
+    padding:30px;
     border-radius:10px;
-}
-
-h1{
+    width:350px;
     text-align:center;
-    margin-bottom:20px;
-}
-
-.input-section{
-    display:flex;
-    gap:10px;
 }
 
 input{
-    flex:1;
+    width:100%;
     padding:10px;
+    margin:10px 0;
 }
 
 button{
-    padding:10px;
+    padding:10px 20px;
     cursor:pointer;
 }
 
-.filters{
-    margin:20px 0;
-    display:flex;
-    gap:10px;
-}
-
-li{
-    list-style:none;
-    padding:10px;
-    border:1px solid #ddd;
-    margin-bottom:10px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.completed{
-    text-decoration:line-through;
-    opacity:0.6;
+#weatherResult{
+    margin-top:20px;
 }
